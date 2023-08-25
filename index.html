@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dice roller</title>
+    <link rel="stylesheet" href="style.css"><link/>
+    <script src="https://kit.fontawesome.com/c80c95266f.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+</head>
+<body class="bg-success">
+    <div class="bg-warning">
+        <h1 class="text-center  height ">DICE GAME</h1> 
+     </div>
+   <div class="d-flex justify-content-evenly mt-5 flex-wrap ">
+    <div class="dice_container m-3">
+     <img src="diceroller.png" height="50px" id="dice" alt="" class="mt-5 d-block  mx-auto" >
+     <div class="d-flex justify-content-evenly mt-5">
+     <div>
+     <p id="ans">Answer :</p> 
+    </div>
+    <div>
+     <button type="button" onclick="reset()" class="reset-btn">reset</button>
+    
+    </div>
+    </div>
+    </div>
+    <div class="roll-div m-3">
+      <button class="mt-5 btn btn-outline-danger d-block mx-auto" type="button" onclick="diceroll()"><i class="fa-solid fa-hand-point-right fa-beat-fade text-light "> </i> &nbsp;Roll dice</button>
+     <img src="dice.gif" height="70px" alt="" class="d-block mx-auto mt-5">
+    </div>
+ </div> 
+   <script>
+
+     const diceImage =document.getElementById("dice");
+  
+    function diceroll(){
+        const min = 1;
+        const max = 7;
+        const randamNumber= Math.floor(Math.random() * (max - min)) + min ;
+        randamNumber.innerText = 
+        console.log(randamNumber);
+
+        switch (randamNumber){
+            case 1:
+              diceImage.src="dice.png";
+              const ans1 = document.getElementById('ans');
+            ans1.innerText="Answer : 1"
+            break ;  
+            case 2:
+              diceImage.src="two.png";
+              const ans2 = document.getElementById('ans');
+            ans2.innerText="Answer : 2"
+            break ; 
+            case 3:
+              diceImage.src="three.png";
+              const ans3 = document.getElementById('ans');
+            ans3.innerText="Answer : 3"
+            break ; 
+            case 4:
+              diceImage.src="four.png";
+              const ans4 = document.getElementById('ans');
+            ans4.innerText="Answer : 4"
+            break ; 
+            case 5:
+              diceImage.src="five.png";
+              const ans5 = document.getElementById('ans');
+            ans5.innerText="Answer : 5"
+            break ;
+            case 6:
+              diceImage.src="six.png";
+              const ans6 = document.getElementById('ans');
+            ans6.innerText="Answer : 6"
+               
+        }
+
+        
+    }
+     function reset(){
+        const backImage=document.getElementById("dice");
+        backImage.src="diceroller.png";
+    
+        const backNull=document.getElementById("ans");
+        backNull.innerText=`Answer : 0 `;
+
+     }
+   </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</body>
+</html>

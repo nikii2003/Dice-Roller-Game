@@ -1,0 +1,32 @@
+.dice_container{
+    height: 300px;
+    width: 300px;
+    background-color: rgb(253, 109, 109);
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.reset-btn{
+    border-radius: 10px;
+    width: 70px;
+    background-color: black;
+    color: white;
+    
+}
+.roll-div{
+    height: 300px;
+    width: 300px;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 10px; 
+   
+}
+.height{
+    height: 70px;
+    padding: 10px;
+}
+@media screen and (max-width:600) {
+  .tumho{
+    display: flex;
+    margin: 10px;
+  }   
+}
